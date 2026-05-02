@@ -18,4 +18,7 @@ scoreboard objectives add regen_tmp2 dummy
 scoreboard objectives remove food_lvl
 scoreboard objectives add food_lvl dummy
 
+# 사이드바 설정 (상태 표시)
+scoreboard objectives setdisplay sidebar regen_state
+
 say [RegenSystem] 로드 완료!
