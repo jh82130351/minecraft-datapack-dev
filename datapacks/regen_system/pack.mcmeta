@@ -1,8 +1,6 @@
 {
   "pack": {
-    "pack_format": 104,
-    "min_format": 104,
-    "max_format": 104,
+    "pack_format": 81,
     "description": "이동 상태별 체력 회복 시스템"
   }
 }
