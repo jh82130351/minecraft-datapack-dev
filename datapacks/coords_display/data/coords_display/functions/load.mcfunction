@@ -1,15 +1,4 @@
-# 기존 objective 제거 후 재생성 (리로드 안전)
-scoreboard objectives remove coord_display
-scoreboard objectives add coord_display dummy
-scoreboard objectives setdisplay sidebar coord_display
+# 타이머용 scoreboard만 유지
+scoreboard objectives add coord_timer dummy
 
-# 헤더
-scoreboard players set "§6§l [ 좌표 ]" coord_display 0
-scoreboard players set "§7━━━━━━━━━━━━━━━" coord_display 0
-
-# 좌표
-scoreboard players set " §aX§f:" coord_display 0
-scoreboard players set " §aY§f:" coord_display 0
-scoreboard players set " §aZ§f:" coord_display 0
-
-say [CoordDisplay] 로드 완료!
+say [CoordDisplay] 액션바 모드로 로드 완료!
