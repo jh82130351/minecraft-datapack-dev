@@ -42,7 +42,7 @@
 
 | 데이터팩 | 설명 | 버전 |
 |----------|------|------|
-| `coords_display` | 플레이어 좌표 + 8방위 액션바 표시 | v2.0 |
+| `coords_display` | 플레이어 좌표 + 8방위 보스바 표시 | v2.1 |
 | `regen_system` | 이동 상태별 체력 회복 시스템 | v1.0 |
 
 ### 데이터팩 구조 (26.1.2+)
@@ -101,9 +101,20 @@ Minecraft 1.21부터 데이터팩 내 명령어 함수 폴더명이 **복수형 
 #### load.mcfunction
 서버 시작 시 1회 실행. 타이머용 scoreboard `coord_timer` 생성.
 ```mcfunction
-# 타이머용 scoreboard만 유지
+# 타이머용 scoreboard
 scoreboard objectives add coord_timer dummy
-say [CoordDisplay] 액션바 모드로 로드 완료!
+
+# 보스바 생성 및 설정
+bossbar add minecraft:coords {"text":"좌표 로딩중..."}
+bossbar set minecraft:coords color green
+bossbar set minecraft:coords style notched_6
+bossbar set minecraft:coords max 1
+bossbar set minecraft:coords value 1
+
+# 모든 플레이어에게 보스바 표시
+execute as @a run bossbar set minecraft:coords players @s
+
+say [CoordDisplay] 보스바 모드로 로드 완료!
 ```
 
 #### tick.mcfunction
@@ -116,7 +127,7 @@ scoreboard players add $timer coord_timer 1
 ```
 
 #### update_all.mcfunction
-각 플레이어의 좌표와 방위를 계산하여 액션바에 표시.
+각 플레이어의 좌표와 방위를 계산하여 보스바에 표시.
 
 **방위 체계:**
 | 방위 | 각도 범위 | 태그 |
