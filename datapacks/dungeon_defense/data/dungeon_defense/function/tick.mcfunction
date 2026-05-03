@@ -1,11 +1,15 @@
+# 디버깅
+# DEBUG: function dungeon_defense:debug
+
 # 1단계 토큰 사용 감지 (우클릭)
-execute as @a[scores={use_paper=1..},nbt={SelectedItem:{id:"minecraft:paper",components:{"minecraft:custom_data":{dungeon_token:1}}}}] at @s run function dungeon_defense:token/use_stage1
+function dungeon_defense:debug
+execute as @a[scores={use_paper=1..}] if items entity @s weapon.mainhand paper[custom_data={dungeon_token:1}] run function dungeon_defense:token/use_stage1
 
 # 2단계 토큰 사용 감지
-execute as @a[scores={use_paper=1..},nbt={SelectedItem:{id:"minecraft:paper",components:{"minecraft:custom_data":{dungeon_token:2}}}}] at @s run function dungeon_defense:token/use_stage2
+execute as @a[scores={use_paper=1..}] if items entity @s weapon.mainhand paper[custom_data={dungeon_token:2}] run function dungeon_defense:token/use_stage2
 
 # 3단계 토큰 사용 감지
-execute as @a[scores={use_paper=1..},nbt={SelectedItem:{id:"minecraft:paper",components:{"minecraft:custom_data":{dungeon_token:3}}}}] at @s run function dungeon_defense:token/use_stage3
+execute as @a[scores={use_paper=1..}] if items entity @s weapon.mainhand paper[custom_data={dungeon_token:3}] run function dungeon_defense:token/use_stage3
 
 # 사용 카운터 리셋
 scoreboard players reset @a[scores={use_paper=1..}] use_paper

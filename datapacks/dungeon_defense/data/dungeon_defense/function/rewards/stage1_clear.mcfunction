@@ -1,4 +1,4 @@
-give @s paper[minecraft:custom_name='{"text":"2단계 던전 토큰","color":"gold","bold":true}',minecraft:lore=['{"text":"우클릭하여 사용","color":"gray"}'],minecraft:custom_model_data=1002,minecraft:custom_data={dungeon_token:2}] 1
+give @s paper[minecraft:custom_name='{"text":"2단계 던전 토큰","color":"gold","bold":true}',minecraft:lore=['{"text":"우클릭하여 사용","color":"gray"}'],minecraft:custom_data={dungeon_token:2}] 1
 
 title @s title {"text":"STAGE 1 CLEAR!","color":"green","bold":true}
 playsound ui.toast.challenge_complete player @s ~ ~ ~ 1 1
