@@ -9,4 +9,7 @@ scoreboard players set #dungeon_x dungeon_stage 10000
 scoreboard players set #dungeon_y dungeon_stage 100
 scoreboard players set #dungeon_z dungeon_stage 10000
 
+# 종이 사용 통계 스코어보드
+scoreboard objectives add use_paper minecraft.used:minecraft.paper
+
 tellraw @a {"text":"[던전 디펜스] 시스템 로드 완료!","color":"gold"}
