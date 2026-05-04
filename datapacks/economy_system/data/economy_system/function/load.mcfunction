@@ -35,7 +35,7 @@ scoreboard players enable @a sell
 
 # 농부 상점 시스템
 scoreboard objectives add farmer_shop trigger "농부 상점"
-scoreboard objectives add farmer_buy trigger "성장 촉진제 구매"
+scoreboard objectives add farmer_buy trigger "농작물 아이템 구매"
 
 # Trigger 활성화
 scoreboard players enable @a farmer_shop
