@@ -135,8 +135,8 @@ execute if score @s buy matches 9 unless score @s coins matches 50.. run tellraw
 execute if score @s buy matches 9 unless score @s coins matches 50.. run scoreboard players reset @s buy
 execute if score @s buy matches 9 unless score @s coins matches 50.. run return 0
 execute if score @s buy matches 9 run scoreboard players remove @s coins 50
-execute if score @s buy matches 9 run give @s potion[potion_contents={potion:"minecraft:long_haste"}] 1
-execute if score @s buy matches 9 run tellraw @s {"text":"✅ 채굴 속도 포션 구매 완료!","color":"green"}
+execute if score @s buy matches 9 run effect give @s minecraft:haste 480 0
+execute if score @s buy matches 9 run tellraw @s {"text":"✅ 채굴 속도(8분) 구매 완료!","color":"green"}
 execute if score @s buy matches 9 run playsound minecraft:entity.experience_orb.pickup player @s ~ ~ ~ 1 1
 execute if score @s buy matches 9 run scoreboard players reset @s buy
 execute if score @s buy matches 9 run return 0
