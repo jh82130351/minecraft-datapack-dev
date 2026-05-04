@@ -33,5 +33,13 @@ scoreboard players enable @a shop
 scoreboard players enable @a buy
 scoreboard players enable @a sell
 
+# 농부 상점 시스템
+scoreboard objectives add farmer_shop trigger "농부 상점"
+scoreboard objectives add farmer_buy trigger "성장 촉진제 구매"
+
+# Trigger 활성화
+scoreboard players enable @a farmer_shop
+scoreboard players enable @a farmer_buy
+
 # 완료 메시지
 tellraw @a {"text":"[경제 시스템] 로드 완료!","color":"gold"}

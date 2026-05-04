@@ -22,7 +22,15 @@ execute as @a[scores={shop=1..}] run function economy_system:shop/show_menu
 execute as @a[scores={buy=1..}] run function economy_system:shop/buy_potion
 execute as @a[scores={sell=1..}] run function economy_system:shop/sell_blocks
 
+# 농부 상점 명령어 처리
+execute as @a[scores={farmer_shop=1..}] run function economy_system:farmer_shop/open
+execute as @a[scores={farmer_buy=1..}] run function economy_system:farmer_shop/buy/growth_booster_x1
+execute as @a[scores={farmer_buy=5..}] run function economy_system:farmer_shop/buy/growth_booster_x5
+execute as @a[scores={farmer_buy=10..}] run function economy_system:farmer_shop/buy/growth_booster_x10
+
 # Trigger 재활성화
 scoreboard players enable @a shop
 scoreboard players enable @a buy
 scoreboard players enable @a sell
+scoreboard players enable @a farmer_shop
+scoreboard players enable @a farmer_buy
