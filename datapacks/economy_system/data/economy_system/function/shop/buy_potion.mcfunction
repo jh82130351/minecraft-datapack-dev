@@ -157,7 +157,7 @@ execute if score @s buy matches 14 unless score @s coins matches 100.. run tellr
 execute if score @s buy matches 14 unless score @s coins matches 100.. run scoreboard players reset @s buy
 execute if score @s buy matches 14 unless score @s coins matches 100.. run return 0
 execute if score @s buy matches 14 run scoreboard players remove @s coins 100
-execute if score @s buy matches 14 run give @s potion[minecraft:potion_contents={potion:"minecraft:strong_haste"}] 1
+execute if score @s buy matches 14 run effect give @s minecraft:haste 240 1
 execute if score @s buy matches 14 run tellraw @s {"text":"✅ 채굴 속도 II 포션 구매 완료!","color":"green"}
 execute if score @s buy matches 14 run playsound minecraft:entity.experience_orb.pickup player @s ~ ~ ~ 1 1
 execute if score @s buy matches 14 run scoreboard players reset @s buy
