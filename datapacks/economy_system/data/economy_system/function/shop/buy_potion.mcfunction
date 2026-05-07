@@ -163,6 +163,17 @@ execute if score @s buy matches 14 run playsound minecraft:entity.experience_orb
 execute if score @s buy matches 14 run scoreboard players reset @s buy
 execute if score @s buy matches 14 run return 0
 
+# 번호 15: 저항 (200 코인) — 효과 직접 부여 (resistance 포션은 바닐라에 없음)
+execute if score @s buy matches 15 unless score @s coins matches 200.. run tellraw @s {"text":"❌ 잔액 부족! (필요: 200 코인)","color":"red"}
+execute if score @s buy matches 15 unless score @s coins matches 200.. run scoreboard players reset @s buy
+execute if score @s buy matches 15 unless score @s coins matches 200.. run return 0
+execute if score @s buy matches 15 run scoreboard players remove @s coins 200
+execute if score @s buy matches 15 run effect give @s minecraft:resistance 480 0
+execute if score @s buy matches 15 run tellraw @s {"text":"✅ 저항(8분) 구매 완료!","color":"green"}
+execute if score @s buy matches 15 run playsound minecraft:entity.player.levelup player @s ~ ~ ~ 1 1.2
+execute if score @s buy matches 15 run scoreboard players reset @s buy
+execute if score @s buy matches 15 run return 0
+
 # 잘못된 번호
 tellraw @s {"text":"❌ 잘못된 번호입니다! /trigger shop 으로 목록 확인","color":"red"}
 scoreboard players reset @s buy

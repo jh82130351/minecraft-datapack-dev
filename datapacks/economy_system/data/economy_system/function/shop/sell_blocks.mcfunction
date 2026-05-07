@@ -106,6 +106,9 @@ execute if data entity @s SelectedItem{id:"minecraft:potion",components:{"minecr
 execute if data entity @s SelectedItem{id:"minecraft:potion",components:{"minecraft:potion_contents":{potion:"minecraft:long_turtle_master"}}} run scoreboard players reset @s sell
 execute if data entity @s SelectedItem{id:"minecraft:potion",components:{"minecraft:potion_contents":{potion:"minecraft:long_turtle_master"}}} run return 0
 
+# 저항 포션 (200 코인) — 포션 아이템이 없으므로 판매 불가 (effect로 부여한 것은 팔 수 없음)
+# 저항 효과는 포션 아이템이 아니므로 `/trigger sell`로 판매 불가
+
 # ========================================
 # 블록 판매 처리 (64개 단위)
 # ========================================

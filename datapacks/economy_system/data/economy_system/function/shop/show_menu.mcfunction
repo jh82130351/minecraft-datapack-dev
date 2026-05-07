@@ -33,6 +33,7 @@ tellraw @s [{"text":"11. ","color":"gold"},{"text":"💨 신속 II - ","color":"
 tellraw @s [{"text":"12. ","color":"gold"},{"text":"💪 힘 II - ","color":"red"},{"text":"100 코인","color":"gold"}]
 tellraw @s [{"text":"13. ","color":"gold"},{"text":"❤️ 재생 II - ","color":"light_purple"},{"text":"120 코인","color":"gold"}]
 tellraw @s [{"text":"14. ","color":"gold"},{"text":"⛏️ 채굴 속도 II - ","color":"gold"},{"text":"100 코인","color":"gold"}]
+tellraw @s [{"text":"15. ","color":"gold"},{"text":"🛡️ 저항 - ","color":"light_purple"},{"text":"200 코인","color":"gold"},{"text":" ⭐특급","color":"red"}]
 
 tellraw @s {"text":""}
 
